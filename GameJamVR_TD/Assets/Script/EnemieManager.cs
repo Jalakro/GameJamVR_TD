@@ -8,8 +8,9 @@ public class EnemieManager : MonoBehaviour
     List<GameObject> CurrentEnemies;
     public List<GameObject> Prefab = new List<GameObject>();
     public int enemieID;
+    public bool enemieEnabled;
 
-
+    public float score;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,10 @@ public class EnemieManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        StartCoroutine("SpawnEnemie");
+        if (enemieEnabled)
+        {
+            StartCoroutine("SpawnEnemie");
+        } 
     }
 
     IEnumerator SpawnEnemie()
