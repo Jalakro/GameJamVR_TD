@@ -1,0 +1,54 @@
+tower defense avec zone large et tu place la ou tu veux des elements
+quadrillage par terre
+tous les batiments sont deja placés sur chaque case et juste setActive()
+nav mesh pour les mobs du point de depart au point d'arrivée
+plateau vertical
+pointeur rayon dispo dans le plateau
+quand tu clique sur un emplacement ca ouvre un popup pour select ce que tu veux construire
+un panneau avec les tourelles en 3D pour les selectionner -> outline script
+
+temps :
+30sec de prise en main et menu 
+45sec de mise en place des premieres defenses
+45sec pour la vague
+
+
+asset :
+
+batiments : 
+	- tourelle basique
+	- tourelle cac genre scie ou autre
+	- sac de sable ou batiment pour bloquer
+
+deux trois types de monstres
+
+
+
+
+///placement table avec plateau par dessus
+///grille 
+///placement des boutons dans chaque case
+///ajout de deux types d'ennemis
+///poser un point de depart qui fait spawn les ennemis a partir d'un true
+poser une arrivé avec de la vie
+faire le navmesh entre depart et arrivé
+placement des batiments : sawblade et box
+	-> icone sur le coté 
+	-> ajout du batiment sur la case du bouton cliqué
+	-> preparer limitation genre pas possible de bloquer le chemin donc check si grille 3x3 si tu place au milieu les diago ou coté sont pas deja occupés
+	-> limitation quantité de sawblade
+outline des case visées et des icones de batiment sur le coté
+mini animation sawblade rotate Y 70° et reviens
+gestion des degats genre OnCollisionEnter entre saw et tag enemies
+score affichage sur un canva vue joueur a coté de la vie du nexus et nb de saw restante
+projection de sang au passage quand collision saw et enemies
+tuto panneau a l'arrivé du joueur avec etapes genre un deux trois quatre selectionner sa tour, placer, faire un chemin, lancer la wave et survivre
+trailer
+ 
+
+
+
+
+
+
+
