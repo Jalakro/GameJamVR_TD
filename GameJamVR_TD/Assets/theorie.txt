@@ -30,23 +30,20 @@ deux trois types de monstres
 ///placement des boutons dans chaque case
 ///ajout de deux types d'ennemis
 ///poser un point de depart qui fait spawn les ennemis a partir d'un true
-poser une arrivé avec de la vie
+///poser une arrivé avec de la vie
 faire le navmesh entre depart et arrivé
-placement des batiments : sawblade et box
+///placement des batiments : sawblade et box
 	-> icone sur le coté 
 	-> ajout du batiment sur la case du bouton cliqué
 	-> preparer limitation genre pas possible de bloquer le chemin donc check si grille 3x3 si tu place au milieu les diago ou coté sont pas deja occupés
 	-> limitation quantité de sawblade
 outline des case visées et des icones de batiment sur le coté
-mini animation sawblade rotate Y 70° et reviens
+///mini animation sawblade rotate Y 70° et reviens
 gestion des degats genre OnCollisionEnter entre saw et tag enemies
 score affichage sur un canva vue joueur a coté de la vie du nexus et nb de saw restante
 projection de sang au passage quand collision saw et enemies
 tuto panneau a l'arrivé du joueur avec etapes genre un deux trois quatre selectionner sa tour, placer, faire un chemin, lancer la wave et survivre
 trailer
- 
-
-
 
 
 
