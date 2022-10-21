@@ -21,20 +21,18 @@ public class BuildTowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (test)
-        {
-            InstantiateTower(1, 1);
-        }
+        
     }
 
-    public void InstantiateTower(int buttonIDx, int buttonIDy)
+    public void SpawnSaw()
     {
-        GameObject tower = Instantiate(Prefab[towerID], new Vector3(buttonIDx * 2.0f, 1, buttonIDy * 1), Quaternion.identity);
+        GameObject tower = Instantiate(Prefab[0], new Vector3(4.7f, 1.75f, 6.4f), Quaternion.identity);
         CurrentTowers.Add(tower);
     }
 
-    public void SelectTower(int p_towerID)
+    public void SpawnObstacle()
     {
-        towerID = p_towerID;
+        GameObject tower = Instantiate(Prefab[1], new Vector3(4.7f, 1.75f, 6.05f), Quaternion.identity);
+        CurrentTowers.Add(tower);
     }
 }

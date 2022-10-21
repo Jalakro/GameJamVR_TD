@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemieManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class EnemieManager : MonoBehaviour
 
     public float score;
 
+    public float duree = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +25,16 @@ public class EnemieManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (enemieEnabled && !flag)
+        if (enemieEnabled && !flag && duree < 120f)
         {
             //InvokeRepeating("SpawnEnemie", 0f, 1.5f);
             StartCoroutine("SpawnEnemie");
         } 
+
+        if (duree > 119f)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     IEnumerator SpawnEnemie()
@@ -37,6 +45,7 @@ public class EnemieManager : MonoBehaviour
         GameObject enemy = Instantiate(Prefab[id], new Vector3(4.3f, 1.75f, 5.7f), Quaternion.identity);
         CurrentEnemies.Add(enemy);
         yield return new WaitForSeconds(1.5f);
+        duree += 1.5f;
         flag = false;
     }
 
