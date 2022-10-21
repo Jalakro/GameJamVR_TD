@@ -5,10 +5,12 @@ using UnityEngine;
 public class BuildTowers : MonoBehaviour
 {
 
-    List<GameObject> CurrentTowers;
+    public List<GameObject> CurrentTowers;
     public List<GameObject> Prefab = new List<GameObject>();
 
     public int towerID;
+
+    public bool test;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +21,15 @@ public class BuildTowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (test)
+        {
+            InstantiateTower(1, 1);
+        }
     }
 
-    public void InstantiateTower(int buttonID)
+    public void InstantiateTower(int buttonIDx, int buttonIDy)
     {
-        GameObject tower = Instantiate(Prefab[towerID]); // GERER POS DE SPAWN
+        GameObject tower = Instantiate(Prefab[towerID], new Vector3(buttonIDx * 2.0f, 1, buttonIDy * 1), Quaternion.identity);
         CurrentTowers.Add(tower);
     }
 
